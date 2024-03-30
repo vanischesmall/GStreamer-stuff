@@ -20,7 +20,7 @@ class video():
                 "! videoconvert ! video/x-raw,format=I420 " \
                 "!  jpegenc " \
                 "! rtpjpegpay " \
-                "! udpsink host=10.50.16.119 port=5000".format(self.fps)
+                "! udpsink host=192.168.35.42 port=1234".format(self.fps)
 
         self.pipeline = Gst.parse_launch(self.pipe)
         self.loop = None
